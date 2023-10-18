@@ -62,7 +62,7 @@ function AddProduct() {
                 <div className="md:flex mb-8">
                     <div className="form-control md:w-1/2">
                         <label className="label">
-                            <span className="label-text"> Phone</span>
+                            <span className="label-text"> Type</span>
                         </label>
                         <label className="input-group">
                             <input type="text" name="phone" placeholder="Phone" className="input input-bordered w-full" />

@@ -1,9 +1,18 @@
 import logo from '../../../public/logo.jpg'
 import { Link, NavLink } from 'react-router-dom'
+import { AuthContext } from '../../provider/AuthProvider';
+import { useContext } from 'react';
 
 const Navber = () => {
 
+    // const { user, logOut } = useContext(AuthContext);
 
+
+    // const handleSingOut = () => {
+    //     logOut()
+    //         .then()
+    //         .catch()
+    // }
 
 
     const navber = <>
@@ -11,6 +20,18 @@ const Navber = () => {
         <li><NavLink to="/addProduct">Add Product</NavLink></li>
         <li><NavLink to="/myCard">My Card</NavLink></li>
         <li><Link to="/login">Login</Link>  </li>
+        {/* 
+        {
+            user ?
+                <button onClick={handleSingOut} className='btn btn-secondary'>Sign Out</button>
+                :
+                <Link to="/login"><button className='Navber-end btn btn-secondary '>Login</button>
+                </Link>
+        }
+
+        {user && <p className='pt-4 mx-4'>{user.displayName}</p>}
+        {user && <img src={user.photoURL} className='w-12 h-12 rounded-full' alt="" />} */}
+
     </>
 
 
@@ -32,7 +53,6 @@ const Navber = () => {
                 </div>
                 <div className="navbar-end hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
-
                         {navber}
                     </ul>
                 </div>

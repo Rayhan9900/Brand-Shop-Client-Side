@@ -5,6 +5,7 @@ import { RouterProvider } from 'react-router-dom'
 import router from './routes/Routes'
 import React from 'react'
 import { Toaster } from 'react-hot-toast'
+import AuthProvider from './provider/AuthProvider'
 
 
 
@@ -13,7 +14,9 @@ import { Toaster } from 'react-hot-toast'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <div className='max-w-6xl mx-auto'> <RouterProvider router={router} /> <Toaster></Toaster> </div>
+    <AuthProvider>
+      <div className='max-w-6xl mx-auto'> <RouterProvider router={router} /> <Toaster></Toaster> </div>
+    </AuthProvider>
 
   </React.StrictMode>,
 )

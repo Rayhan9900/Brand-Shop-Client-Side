@@ -4,6 +4,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import Rating from 'react-rating';
+import { AiOutlineStar } from 'react-icons/ai'
 
 function Products() {
 
@@ -46,6 +48,7 @@ function Products() {
                                     <h2 className="card-title">{product.Name}</h2>
                                     <p>{product.ShortDescription}</p>
                                     <p>{product.Price}</p>
+                                    <p>{product.Rating}</p>
                                     <div className="card-actions justify-center">
                                         <button className="btn btn-primary">Update</button>
                                         <button className="btn btn-primary">Details</button>
