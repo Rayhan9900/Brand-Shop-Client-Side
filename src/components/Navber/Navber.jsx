@@ -1,5 +1,5 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import logo from '../../../public/logo.jpg'
+import { Link, NavLink } from 'react-router-dom'
 
 const Navber = () => {
 
@@ -10,14 +10,13 @@ const Navber = () => {
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/addProduct">Add Product</NavLink></li>
         <li><NavLink to="/myCard">My Card</NavLink></li>
-        <li><NavLink to="/login">Login</NavLink></li>
-
+        <li><Link to="/login">Login</Link>  </li>
     </>
 
 
     return (
         <div>
-            <div className="navbar bg-base-100">
+            <div className="navbar text-white h-14 bg-gradient-to-r from-cyan-500 to-sky-500 rounded-t-lg mt-6">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -28,16 +27,14 @@ const Navber = () => {
                             {navber}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+                    <img className=' w-12 h-12 rounded-full ' src={logo} alt="" />
+                    <a className="btn btn-ghost normal-case text-xl font-dancing text-white ">TechWizHub</a>
                 </div>
-                <div className="navbar-center hidden lg:flex">
+                <div className="navbar-end hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
 
                         {navber}
                     </ul>
-                </div>
-                <div className="navbar-end">
-                    <a className="btn">Button</a>
                 </div>
             </div>
         </div>

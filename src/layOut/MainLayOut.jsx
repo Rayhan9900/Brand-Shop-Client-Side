@@ -5,7 +5,7 @@ import Footer from '../components/Footer/Footer'
 
 function MainLayOut() {
     return (
-        <div>
+        <div className=''>
             <Navber></Navber>
             <Outlet></Outlet>
             <Footer></Footer>

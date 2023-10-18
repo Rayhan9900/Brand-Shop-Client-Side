@@ -6,6 +6,10 @@ export default {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      dancing:
+        ['Lobster']
+    }
   },
   plugins: [require("daisyui")],
 
