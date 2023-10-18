@@ -1,9 +1,8 @@
 import toast from "react-hot-toast";
-import { Link, Navigate, useNavigate } from "react-router-dom";
 
 
 function AddProduct() {
-    const navigate = useNavigate()
+
     const handlePhone = e => {
         e.preventDefault();
         const form = e.target;
@@ -30,7 +29,7 @@ function AddProduct() {
             .then(data => {
                 if (data.insertedId) {
                     toast.success('Add Product SuccessFully')
-                    navigate('/products')
+
                 }
             })
 

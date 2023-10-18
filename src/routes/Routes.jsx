@@ -23,8 +23,9 @@ const router = createBrowserRouter([
                 element: <AddProduct></AddProduct>
             },
             {
-                path: '/products',
+                path: '/products/:BrandName',
                 element: <Products />
+
             },
             {
                 path: "/myCard",
