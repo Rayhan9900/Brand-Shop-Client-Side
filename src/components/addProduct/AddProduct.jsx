@@ -16,7 +16,7 @@ function AddProduct() {
         const data = { Name, BrandName, Type, Price, ShortDescription, Rating, Image }
         console.log(data)
 
-        fetch('http://localhost:5000/products', {
+        fetch('https://brand-shop-server-i09jslbpl-rayhanmahmud990099-gmailcom.vercel.app/products', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

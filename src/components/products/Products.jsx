@@ -13,7 +13,7 @@ function Products() {
     const [products, setProducts] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/products?BrandName=${BrandName}`)
+        fetch(`https://brand-shop-server-i09jslbpl-rayhanmahmud990099-gmailcom.vercel.app/products?BrandName=${BrandName}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data)
@@ -27,7 +27,7 @@ function Products() {
                 <Swiper Navigation={true} modules={[Navigation]} className="mySwiper">
                     {
                         products.map(item => <SwiperSlide key={item._id}>
-                            <img className='h-96 w-full' src={item.Image} alt="" />
+                            <img className=' w-full h-96' src={item.Image} alt="" />
                         </SwiperSlide>
                         )
                     }

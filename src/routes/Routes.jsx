@@ -35,18 +35,18 @@ const router = createBrowserRouter([
             {
                 path: "/myCard",
                 element: <PrivateRoute> <MyCard></MyCard></PrivateRoute>,
-                loader: () => fetch('http://localhost:5000/carts')
+                loader: () => fetch('https://brand-shop-server-i09jslbpl-rayhanmahmud990099-gmailcom.vercel.app/carts')
             },
             {
                 path: "/upDate/:id",
                 element: <PrivateRoute><UpDate></UpDate></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/products/${params.id}`)
+                loader: ({ params }) => fetch(`https://brand-shop-server-i09jslbpl-rayhanmahmud990099-gmailcom.vercel.app/products/${params.id}`)
 
             },
             {
                 path: "/details/:id",
                 element: <PrivateRoute><Details /></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/products/${params.id}`)
+                loader: ({ params }) => fetch(`https://brand-shop-server-i09jslbpl-rayhanmahmud990099-gmailcom.vercel.app/products/${params.id}`)
             },
             {
                 path: "/register",

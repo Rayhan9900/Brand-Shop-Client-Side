@@ -21,7 +21,7 @@ function UpDate() {
         const Image = form.photo.value;
         const updata = { Name, BrandName, Type, Price, ShortDescription, Rating, Image }
 
-        fetch(`http://localhost:5000/products/${_id}`, {
+        fetch(`https://brand-shop-server-i09jslbpl-rayhanmahmud990099-gmailcom.vercel.app/products/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

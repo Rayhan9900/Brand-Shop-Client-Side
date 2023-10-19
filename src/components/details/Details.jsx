@@ -5,10 +5,10 @@ import { useLoaderData } from 'react-router-dom'
 function Details() {
     const singleData = useLoaderData();
     console.log(singleData)
-    const { Image, BrandName, Name, ShortDescription, Price, Rating, _id } = singleData;
+    const { Image, BrandName, Name, ShortDescription, Price, Rating } = singleData;
 
     const handleAddCart = (item) => {
-        fetch(`http://localhost:5000/carts`, {
+        fetch(`https://brand-shop-server-i09jslbpl-rayhanmahmud990099-gmailcom.vercel.app/carts`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
