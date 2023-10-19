@@ -1,13 +1,16 @@
 
+import Marquee from 'react-fast-marquee'
 import reviews from '../../assets/review.avif'
 
 function CustomarReview() {
 
 
     return (
-        <div className='mb-5'>
-            <h2 className="text-3xl text-center  text-cyan-400 ">SEE WHY CUSTOMERS LOVE THE OUR MOBILES</h2>
-            <p className='text-xl text-center'>DESIGNED TO PERFECTION</p>
+        <div className=' my-24'>
+            <Marquee>
+                <h2 className="text-3xl text-center  text-cyan-400 my-8 ">SEE WHY CUSTOMERS LOVE THE OUR MOBILES</h2>
+            </Marquee>
+            <p className='text-xl text-center mb-6'>DESIGNED TO PERFECTION</p>
             <div>
                 <div className="card lg:card-side bg-base-100 shadow-xl">
                     <figure><img src={reviews} alt="Album" /></figure>

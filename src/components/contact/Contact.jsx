@@ -1,10 +1,15 @@
 import { FiPhoneCall, } from 'react-icons/fi'
 import { AiOutlineMessage } from 'react-icons/ai'
+import Marquee from 'react-fast-marquee'
 
 function Contact() {
     return (
         <div className='mb-10 '>
-            <h2 className='text-4xl text-center  text-cyan-400 '>WELCOME TO PHONO SUPPORT. WE'RE HERE TO HELP.</h2>
+
+            <Marquee>
+                <h2 className='text-4xl text-center  text-cyan-400 '>WELCOME TO PHONO SUPPORT. WE'RE HERE TO HELP.</h2>
+            </Marquee>
+
             <h2 className="text-2xl text-center mb-6">
                 ALWAYS ON YOUR SIDE WHEN YOU NEED HELP
             </h2>

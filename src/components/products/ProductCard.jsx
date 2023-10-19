@@ -6,7 +6,7 @@ function ProductCard({ product }) {
     return (
         <div>
             <div className="card card-compact w-96 bg-base-100 shadow-xl">
-                <figure><img src={Image} alt="Shoes" /></figure>
+                <figure><img className="w-72 h-48" src={Image} alt="Shoes" /></figure>
                 <div className="card-body">
                     <p>{BrandName}</p>
                     <h2 className="card-title">{product.Name}</h2>

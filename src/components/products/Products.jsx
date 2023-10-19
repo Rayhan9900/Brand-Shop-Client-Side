@@ -34,7 +34,7 @@ function Products() {
                 </Swiper>
             </>
 
-            <div className='grid md:grid-cols-3'>
+            <div className='grid md:grid-cols-3 gap-5 mt-7'>
                 {
                     products.map(product =>
                         <ProductCard key={product._id} product={product} />
