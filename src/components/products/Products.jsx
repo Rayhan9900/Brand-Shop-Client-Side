@@ -1,17 +1,15 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
-import 'swiper/css/navigation';
-import Rating from 'react-rating';
-import { AiOutlineStar } from 'react-icons/ai'
+import 'swiper/css/navigation'
+import ProductCard from './ProductCard';
 
 function Products() {
 
 
     const { BrandName } = useParams()
-    console.log(BrandName)
     const [products, setProducts] = useState([])
 
     useEffect(() => {
@@ -22,7 +20,6 @@ function Products() {
                 setProducts(data)
             })
     }, [])
-    console.log(products)
 
     return (
         <div>
@@ -40,22 +37,7 @@ function Products() {
             <div className='grid md:grid-cols-3'>
                 {
                     products.map(product =>
-                        <div key={product._id}>
-                            <div className="card card-compact w-96 bg-base-100 shadow-xl">
-                                <figure><img src={product.Image} alt="Shoes" /></figure>
-                                <div className="card-body">
-                                    <p>{product.BrandName}</p>
-                                    <h2 className="card-title">{product.Name}</h2>
-                                    <p>{product.ShortDescription}</p>
-                                    <p>{product.Price}</p>
-                                    <p>{product.Rating}</p>
-                                    <div className="card-actions justify-center">
-                                        <button className="btn btn-primary">Update</button>
-                                        <button className="btn btn-primary">Details</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <ProductCard key={product._id} product={product} />
                     )
                 }
             </div>

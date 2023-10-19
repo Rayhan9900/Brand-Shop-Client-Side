@@ -6,12 +6,16 @@ import MyCard from "../components/MyCard/MyCard";
 import Login from "../components/Login/Login";
 import Register from "../components/Register/Register";
 import Products from "../components/products/Products";
+import ErrorPage from "../components/errorPage/ErrorPage";
+import UpDate from "../components/Update/UpDate";
+import Details from "../components/details/Details";
 
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <MainLayOut></MainLayOut>,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
                 path: "/",
@@ -30,6 +34,16 @@ const router = createBrowserRouter([
             {
                 path: "/myCard",
                 element: <MyCard></MyCard>
+            },
+            {
+                path: "/upDate/:id",
+                element: <UpDate></UpDate>,
+                loader: ({ params }) => fetch(`http://localhost:5000/products/${params.id}`)
+
+            },
+            {
+                path: "/details/:id",
+                element: <Details />,
             },
             {
                 path: "/register",

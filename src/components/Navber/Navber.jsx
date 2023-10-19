@@ -5,22 +5,20 @@ import { useContext } from 'react';
 
 const Navber = () => {
 
-    // const { user, logOut } = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
 
 
-    // const handleSingOut = () => {
-    //     logOut()
-    //         .then()
-    //         .catch()
-    // }
+    const handleSingOut = () => {
+        logOut()
+            .then()
+            .catch()
+    }
 
 
     const navber = <>
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/addProduct">Add Product</NavLink></li>
         <li><NavLink to="/myCard">My Card</NavLink></li>
-        <li><Link to="/login">Login</Link>  </li>
-        {/* 
         {
             user ?
                 <button onClick={handleSingOut} className='btn btn-secondary'>Sign Out</button>
@@ -30,7 +28,7 @@ const Navber = () => {
         }
 
         {user && <p className='pt-4 mx-4'>{user.displayName}</p>}
-        {user && <img src={user.photoURL} className='w-12 h-12 rounded-full' alt="" />} */}
+        {user && <img src={user.photoURL} className='w-12 h-12 rounded-full' alt="" />}
 
     </>
 
