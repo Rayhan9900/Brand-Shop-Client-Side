@@ -13,29 +13,27 @@ function UpDate() {
         e.preventDefault();
         const form = e.target;
         const Name = form.name.value;
-        const BrandName = form.brand.value;
+        const BrandName = form.brandName.value;
         const Type = form.phone.value;
         const Price = form.price.value;
         const ShortDescription = form.short.value;
         const Rating = form.rating.value;
         const Image = form.photo.value;
         const updata = { Name, BrandName, Type, Price, ShortDescription, Rating, Image }
-        console.log(updata)
 
         fetch(`http://localhost:5000/products/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(data)
+            body: JSON.stringify(updata)
 
         })
             .then(res => res.json())
 
             .then(data => {
-                if (data.insertedId) {
-                    toast.success('Add Product SuccessFully')
-
+                if (data.acknowledged) {
+                    toast.success('Update Product SuccessFully')
                 }
             })
 
@@ -116,7 +114,7 @@ function UpDate() {
                         </label>
                     </div>
                 </div>
-                <input type="submit" value="Up Phone" className="btn btn-block" />
+                <input type="submit" value="UpDate Phone" className="btn btn-block" />
             </form>
 
         </div>

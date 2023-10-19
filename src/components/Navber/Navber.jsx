@@ -21,14 +21,15 @@ const Navber = () => {
         <li><NavLink to="/myCard">My Card</NavLink></li>
         {
             user ?
-                <button onClick={handleSingOut} className='btn btn-secondary'>Sign Out</button>
+                <>
+                    <li onClick={handleSingOut} className='mt-2 cursor-pointer'>Sign Out</li>
+                    <p className=' mx-4 mt-2'>{user.displayName}</p>
+                    <img src={user.photoURL} className='w-12 h-12 rounded-full' alt="" />
+                </>
                 :
-                <Link to="/login"><button className='Navber-end btn btn-secondary '>Login</button>
-                </Link>
+                <Link to="/login"><li className='mt-2 cursor-pointer'>Login</li></Link>
         }
 
-        {user && <p className='pt-4 mx-4'>{user.displayName}</p>}
-        {user && <img src={user.photoURL} className='w-12 h-12 rounded-full' alt="" />}
 
     </>
 

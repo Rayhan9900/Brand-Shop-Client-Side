@@ -7,7 +7,8 @@ import { AuthContext } from '../../provider/AuthProvider';
 function Login() {
     const { signIn, signInGoogle } = useContext(AuthContext);
     const location = useLocation();
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+    const from = location.state?.from?.pathname || "/"
 
     const handleLogin = e => {
         e.preventDefault();
@@ -21,7 +22,7 @@ function Login() {
         signIn(email, password)
             .then(result => {
                 console.log(result.user)
-                navigate(location?.state ? location.state : "/")
+                navigate(form, { replace: true })
                 toast.success('Login Successful')
             })
             .catch(error => {
